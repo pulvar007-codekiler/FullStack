@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    font-family: Arial;
+}
+
+.container {
+    margin-top: 50px;
+    background: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#inp {
+    width: 70%;
+    padding: 7px;
+}
+
+#btn {
+    padding: 7px 15px;
+    margin-left: 5px;
+}
+
+li {
+    list-style: none;
+    padding: 8px;
+    margin-top: 8px;
+    background: #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+button.edit {
+    margin-left: 10px;
+}
+
+button.delete {
+    margin-left: 10px;
+    color: white;
+    background: red;
+    border: none;
+    border-radius: 3px;
+}
+
+    </style>
+</head>
+<body>
+    <div  class="container">
+        <h3 id="title">TO-DO LIST</h3>
+        <input id="inp" type="text">
+        <button id="btn">Add</button>
+        <ul id="list">
+
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

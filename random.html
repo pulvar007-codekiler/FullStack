@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Activity Explorer</title>
+</head>
+
+<body>
+
+    <h2>Random Activity</h2>
+
+    <p id="activity">Loading...</p>
+    <p id="type"></p>
+    <p id="participants"></p>
+
+    <button id="btn">Get Another Activity</button>
+
+    <script>
+        const activity = document.getElementById("activity");
+        const type = document.getElementById("type");
+        const participants = document.getElementById("participants");
+        const btn = document.getElementById("btn");
+
+        async function getActivity() {
+            activity.textContent = "Loading...";
+
+            try {
+                let res = await fetch("https://www.boredapi.com/api/activity");
+                let data = await res.json();
+
+                activity.textContent = "Activity: " + data.activity;
+                type.textContent = "Type: " + data.type;
+                participants.textContent = "Participants: " + data.participants;
+
+            } catch (error) {
+                activity.textContent = "Error! Try again.";
+                type.textContent = "";
+                participants.textContent = "";
+            }
+        }
+        getActivity();
+        btn.addEventListener("click", getActivity);
+    </script>
+
+</body>
+
+</html>

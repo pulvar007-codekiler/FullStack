@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            background-color: violet;
+        }
+
+        input {
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <h1 class="heading">Credentials</h1>
+            <div>
+                <label for="name">Full Name: </label>
+                <input id="name" type="text" placeholder="Enter your name">
+            </div><br>
+            <div>
+                <label for="age">Age: </label>
+                <input id="age" type="number" placeholder="Enter your age">
+            </div><br>
+            <div>
+                <label for="email">Email: </label>
+                <input id="email" type="email" placeholder="Enter your email">
+            </div><br>
+            <div>
+                <label for="password">Password: </label>
+                <input id="password" type="password" placeholder="Enter your password">
+            </div><br>
+            <div>
+                <label for="Bio">Bio: </label>
+                <textarea id="Bio" type="text" placeholder="Enter your bio"></textarea>
+            </div><br>
+            <div>
+                <h3>Gender</h3>
+                <select id="">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option selected>Femboy</option>
+                </select>
+            </div>
+            <div>
+                <h3>User Type</h3>
+                <label for="buyer">Buyer: </label>
+                <input id="buyer" type="radio" name="usertype">
+                <label for="seller">Seller: </label>
+                <input id="seller" type="radio" name="usertype">
+            </div><br>
+            <div>
+                <h3>Music Genre</h3>
+                <label for="hindi">Hindi: </label>
+                <input id="hindi" type="checkbox" name="Music">
+                <label for="english">English: </label>
+                <input id="english" type="checkbox" name="Music">
+                <label for="bhojpuri">Bhojpuri: </label>
+                <input id="bhojpuri" type="checkbox" name="Music">
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>
